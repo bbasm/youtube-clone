@@ -1,207 +1,613 @@
-<style>
-  .shadow {
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    transition: box-shadow 0.15s;
-  }
+<!DOCTYPE html>
+<html>
 
-  .shadow:active {
-    box-shadow: 0 0 0;
-    margin-top: 2px;
-    margin-left: 2px;
-    transition: box-shadow 0.15s;
-  }
+<head>
+  <title>Exercises</title>
 
-  .stretch {
-    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    padding-left: 10px;
-    padding-right: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-    margin-top: 30px;
-    margin-bottom: 30px;
-    transition: padding-left 0.2s,
-      padding-right 0.2s,
-      padding-bottom 0.2s,
-      padding-top 0.2s;
-  }
+  <style>
+    .shadow {
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      background-color: darkgreen;
+      color: white;
+      border: none;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      transition: box-shadow 0.15s;
+    }
 
-  .stretch:hover {
-    padding-left: 20px;
-    padding-right: 20px;
-    padding-bottom: 10px;
-    padding-top: 10px;
-    transition: padding-left 0.2s,
-      padding-right 0.2s,
-      padding-bottom 0.2s,
-      padding-top 0.2s;
-  }
+    .shadow:active {
+      box-shadow: 0 0 0;
+      margin-top: 2px;
+      margin-left: 2px;
+      transition: box-shadow 0.15s;
+    }
 
-  .numbers {
-    background-color: darkgreen;
-    color: white;
-    border: none;
-    margin-bottom: 10px;
-    margin-left: 8px;
-    margin-right: 8px;
-    padding-right: 10px;
-    padding-left: 10px;
-    padding-bottom: 5px;
-    padding-top: 5px;
-  }
+    .stretch {
+      box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.5);
+      background-color: darkgreen;
+      color: white;
+      border: none;
+      padding-left: 10px;
+      padding-right: 10px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+      margin-top: 30px;
+      margin-bottom: 30px;
+      transition: padding-left 0.2s,
+        padding-right 0.2s,
+        padding-bottom 0.2s,
+        padding-top 0.2s;
+    }
 
-  .numbers:hover {
-    padding-left: 15px;
-    padding-right: 15px;
-    margin-left: 3;
-    margin-right: 3;
-  }
+    .stretch:hover {
+      padding-left: 20px;
+      padding-right: 20px;
+      padding-bottom: 10px;
+      padding-top: 10px;
+      transition: padding-left 0.2s,
+        padding-right 0.2s,
+        padding-bottom 0.2s,
+        padding-top 0.2s;
+    }
 
-  p {
-    font-family: Arial;
-  }
+    .numbers {
+      background-color: darkgreen;
+      color: white;
+      border: none;
+      margin-bottom: 10px;
+      margin-left: 8px;
+      margin-right: 8px;
+      padding-right: 10px;
+      padding-left: 10px;
+      padding-bottom: 5px;
+      padding-top: 5px;
+    }
 
-  .new-text {
-    color: rgb(255, 145, 0);
-    text-align: center;
-    font-size: 11px;
-    margin: 5px;
-    font-weight: bold;
-    margin-top: 15px;
-  }
+    .numbers:hover {
+      padding-left: 15px;
+      padding-right: 15px;
+      margin-left: 3;
+      margin-right: 3;
+    }
 
-  .macbook-text {
-    font-weight: bold;
-    text-align: center;
-    margin: 5px;
-    font-size: 16;
-  }
+    p {
+      font-family: Arial;
+      margin: 0;
+    }
 
-  .super-text {
-    font-weight: bold;
-    text-align: center;
-    margin: 5px;
-    font-size: 22;
-  }
+    .new-text {
+      color: rgb(255, 145, 0);
+      text-align: center;
+      font-size: 11px;
+      margin: 5px;
+      font-weight: bold;
+      margin-top: 15px;
+    }
 
-  .price {
-    color: grey;
-    text-align: center;
-    font-size: 12px;
-    margin: 10px;
-  }
+    .macbook-text {
+      font-weight: bold;
+      text-align: center;
+      margin: 5px;
+      font-size: 16;
+    }
 
-  .buy-button {
-    margin: 0 auto;
-    display: block;
-    border: none;
-    background-color: rgb(42, 144, 234);
-    padding-left: 12px;
-    padding-right: 12px;
-    padding-bottom: 8px;
-    padding-top: 8px;
-    border-radius: 20px;
-    color: white;
-    margin-bottom: 15px;
-  }
+    .super-text {
+      font-weight: bold;
+      text-align: center;
+      margin: 5px;
+      font-size: 22;
+    }
 
-  .name-tweet {
-    margin-top: 15px;
-    font-weight: bold;
-    margin-bottom: 0;
-  }
+    .price {
+      color: grey;
+      text-align: center;
+      font-size: 12px;
+      margin: 10px;
+    }
 
-  .info-tweet {
-    font-weight: normal;
-    color: grey;
-  }
+    .buy-button {
+      margin: 0 auto;
+      display: block;
+      border: none;
+      background-color: rgb(42, 144, 234);
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 8px;
+      padding-top: 8px;
+      border-radius: 20px;
+      color: white;
+      margin-bottom: 15px;
+    }
 
-  .tagged-text {
-    color: rgb(43, 160, 255);
-  }
+    .name-tweet {
+      margin-top: 15px;
+      font-weight: bold;
+      margin-bottom: 0;
+    }
 
-  .first-tweet {
-    margin-top: 11px;
-  }
+    .info-tweet {
+      font-weight: normal;
+      color: grey;
+    }
 
-  .second-tweet {
-    margin-bottom: 15px;
-  }
-</style>
+    .tagged-text {
+      color: rgb(43, 160, 255);
+    }
 
-<section class="four">
-  <button class="shadow">
-    Shadow
-  </button>
+    .first-tweet {
+      margin-top: 11px;
+    }
 
-  <br>
+    .second-tweet {
+      margin-bottom: 15px;
+    }
 
-  <button class="stretch">
-    Stretch
-  </button>
+    .grid-one {
+      display: grid;
+      grid-template-columns: 200px 75px;
+    }
 
-  <br>
+    .div-one {
+      background-color: lightblue;
+    }
 
-  <button class="numbers">
-    One
-  </button>
+    .div-two {
+      background-color: pink;
+    }
 
-  <button class="numbers">
-    Two
-  </button>
+    .div-exercises {
+      padding-top: 15px;
+    }
 
-  <button class="numbers">
-    Three
-  </button>
+    .profile {
+      width: 200px;
+      box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+      vertical-align: top;
+      margin-right: 15px;
+    }
 
-  <hr>
+    .profile-picture {
+      width: 200px;
+      height: 200px;
+      object-fit: cover;
+      margin-bottom: 12px;
+    }
 
-</section>
+    .name {
+      font-size: 18px;
+      font-weight: bold;
+      margin-left: 8px;
+      margin-bottom: 5px;
+    }
 
-<section class=five">
-  <p class="new-text">
-    New
-  </p>
+    .mutual-friends-row {
+      margin-left: 8px;
+      margin-bottom: 10px;
+    }
 
-  <p class="macbook-text">
-    MacBook Pro
-  </p>
+    .mutual-friend-picture {
+      height: 28px;
+      width: 28px;
+      object-fit: cover;
+      border-radius: 14px;
+      vertical-align: middle;
+      margin-right: 4px;
+    }
 
-  <p class="super-text">
-    SuperCharged for pros.
-  </p>
+    .mutual-friends {
+      vertical-align: middle;
+      color: rgb(100, 100, 100);
+    }
 
-  <p class="price">
-    From $1999
-  </p>
+    .add-friend-button {
+      background-color: rgb(24, 119, 242);
+      color: white;
+      border: none;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      padding-left: 20px;
+      padding-right: 20px;
+      border-radius: 4px;
+      font-size: 16px;
+      margin-left: 8px;
+      margin-bottom: 10px;
+    }
 
-  <button class="buy-button">
-    Buy
-  </button>
+    .gird-profile {
+      display: grid;
+      grid-template-columns: 200px 200px 200px;
+      column-gap: 20px;
+    }
+  </style>
+</head>
 
-<hr>
+<body style="height: 2000px;">
+  <section class="four">
+    <button class="shadow">
+      Shadow
+    </button>
 
-<p class="name-tweet">
-  freeCodeCamp.org <span class="info-tweet">@freeCodeCamp 1h</span>
-</p>
+    <br>
 
-<p class="first-tweet">
-  As a web developer, you'll want to make your projects easy to use and <br> navigate around.
-</p>
+    <button class="stretch">
+      Stretch
+    </button>
 
-<p class="second-tweet">
-  Here <span class="tagged-text">@chp_it</span> outlines the top skills new developers shoud have.
-</p>
+    <br>
 
-<hr>
+    <button class="numbers">
+      One
+    </button>
 
-</section>
+    <button class="numbers">
+      Two
+    </button>
+
+    <button class="numbers">
+      Three
+    </button>
+
+    <hr>
+
+  </section>
+
+  <section class=five">
+    <p class="new-text">
+      New
+    </p>
+
+    <p class="macbook-text">
+      MacBook Pro
+    </p>
+
+    <p class="super-text">
+      SuperCharged for pros.
+    </p>
+
+    <p class="price">
+      From $1999
+    </p>
+
+    <button class="buy-button">
+      Buy
+    </button>
+
+    <hr>
+
+    <p class="name-tweet">
+      freeCodeCamp.org <span class="info-tweet">@freeCodeCamp 1h</span>
+    </p>
+
+    <p class="first-tweet">
+      As a web developer, you'll want to make your projects easy to use and <br> navigate around.
+    </p>
+
+    <p class="second-tweet">
+      Here <span class="tagged-text">@chp_it</span> outlines the top skills new developers shoud have.
+    </p>
+
+    <hr>
+
+  </section>
+
+  <section class="eleven">
+    <div class="grid-one div-exercises">
+      <div class="div-one">200px</div>
+      <div class="div-two">75px</div>
+    </div>
+
+    <div style="display: grid;
+    grid-template-columns: 50px 1fr 75px;" class="div-exercises">
+      <div style="background-color: lightblue;">col1</div>
+      <div style="background-color: lightpink;">col2</div>
+      <div style="background-color: lightblue;">col3s</div>
+    </div>
+
+    <div class="div-exercises" style="display: grid; grid-template-columns: 1fr 1fr 1fr 1fr; column-gap: 20px; 
+       row-gap: 10px; margin-bottom: 30px;">
+      <div style="background-color: lightseagreen;">col1</div>
+      <div style="background-color: lightseagreen;">col2</div>
+      <div style="background-color: lightseagreen;">col3</div>
+      <div style="background-color: lightseagreen;">col4</div>
+      <div style="background-color: lightseagreen;">col1</div>
+      <div style="background-color: lightseagreen;">col2</div>
+      <div style="background-color: lightseagreen;">col3</div>
+      <div style="background-color: lightseagreen;">col4</div>
+
+    </div>
+
+    <div class="gird-profile">
+      <div class="profile">
+        <img class="profile-picture" src="cat1.avif">
+        <p class="name">
+          Oliver
+        </p>
+        <div class="mutual-friends-row">
+          <img class="mutual-friend-picture" src="profile-1.jpg">
+          <p class="mutual-friends">
+            2 mutual friends
+          </p>
+        </div>
+        <button class="add-friend-button">
+          Add Friend
+        </button>
+      </div>
+
+      <div class="profile">
+        <img class="profile-picture" src="cat1.avif">
+        <p class="name">
+          Mimi
+        </p>
+        <div class="mutual-friends-row">
+          <img class="mutual-friend-picture" src="profile-1.jpg">
+          <p class="mutual-friends">
+            3 mutual friends
+          </p>
+        </div>
+        <button class="add-friend-button">
+          Add Friend
+        </button>
+      </div>
+
+      <div class="profile">
+        <img class="profile-picture" src="cat1.avif">
+        <p class="name">
+          Rex
+        </p>
+        <div class="mutual-friends-row">
+          <img class="mutual-friend-picture" src="profile-1.jpg">
+          <p class="mutual-friends">
+            4 mutual friends
+          </p>
+        </div>
+        <button class="add-friend-button">
+          Add Friend
+        </button>
+      </div>
+    </div>
+
+
+    <hr style="margin-top: 20px; margin-bottom: 20px;">
+  </section>
+
+  <section class="twelve">
+    <div style="display: flex; margin-bottom: 20px;">
+      <div style="width: 200px; background-color: lightblue;">200px</div>
+      <div style="width: 75px; background-color: lightpink;">75px</div>
+    </div>
+
+    <div style="display: flex; margin-bottom: 20px;">
+      <div style="width: 50px; background-color: lightblue;">item1</div>
+      <div style="flex: 1; background-color: lightpink;">item2</div>
+      <div style="width: 75px; background-color: lightblue;">item3</div>
+    </div>
+
+    <div style="display: flex; justify-content: space-between; border: solid 1px black; margin-bottom: 20px;">
+      <div style="background-color: pink;">item1</div>
+      <div style="background-color: pink;">item2</div>
+      <div style="background-color: pink;">item3</div>
+      <div style="background-color: pink;">item4</div>
+    </div>
+
+    <div
+      style="display: flex; height: 50px; border: 1px solid gray; justify-content: space-between; align-items: center; margin-bottom: 20px;">
+      <div style="background-color: pink;">item1</div>
+      <div style="background-color: pink;">item2</div>
+    </div>
+
+    <div style="
+    background-color: rgb(148, 85, 180); 
+    display: flex;
+    height: 50px;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;">
+      <div style="
+        color: white; 
+        font-family: Arial, Helvetica, sans-serif; 
+        font-weight: bold;
+          margin-left: 10px;">
+        Home</div>
+      <div>
+        <input type="search" placeholder="Search" style="
+          border-radius: 20px;
+          border: none; 
+          padding: 5px;
+          width: 400px;
+          ">
+      </div>
+      <div>
+        <button style="
+          background-color: rgb(148, 85, 180);
+          border: 1px solid white;
+          color: white;
+          padding: 7px;
+          margin-right: 10px;">
+          Download</button>
+      </div>
+    </div>
+
+    <div style="
+    display: flex;
+    align-items: center;">
+      <img src="cat1.avif" style="
+        border-radius: 50px; 
+        width: 50px; 
+        height: 50px;
+        object-fit: cover;
+        ">
+      <div style="margin-left: 10px; width: 200px;">
+        <p style="
+            font-weight: bold;
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 15px;
+            margin: 0;
+            margin-bottom: 3px;">Oliver</p>
+        <p style="
+            color: gray;
+            font-size: 14px;
+            margin: 0;
+            margin-bottom: 3px;">
+          the cat
+        </p>
+        <p style="color: gray;
+            font-size: 13px;
+            margin: 0;
+            margin-bottom: 3px;">
+          Popular
+        </p>
+      </div>
+
+      <button style="
+      background-color: rgb(72, 136, 255);
+      border: none;
+      color: white;
+      width: 90px;
+      height: 35px;
+      border-radius: 5px;">
+        <p style="
+        font-weight: bold;
+        text-align: center;
+        margin: 0;">Follow</p>
+      </button>
+    </div>
+
+    <hr style="margin-bottom: 20px;">
+  </section>
+
+  <section class="thirteen">
+    <div class="tweet" style="
+      display: flex;
+      
+  flex-direction: row;
+      width: 450px;">
+      <div>
+        <div class="tweet-text" style="
+          display: flex;">
+          <div>
+            <img src="profile-1.jpg" style="
+              border-radius: 50px;
+              width: 50px;">
+          </div>
+          <div class="tweet-info">
+            <div class="handle">
+              <p style="
+                font-weight: bold;
+                margin-left: 10px;">supersimple.dev
+                <a style="
+                color: gray;
+                font-weight: normal;">
+                  @SumperSimpleDev</a>
+              </p>
+            </div>
+            <div class="desc">
+              <p style="
+                margin-top: 5px;
+                margin-left: 10px;
+                line-height: 1.3;">What is backend web development? A complete overview. New video is up!</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="link" style="
+        border: 1px solid gray;
+        border-radius: 20px;
+        height: 90px;
+        width: 320px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 10px;
+        margin-left: 70px;">
+          <div class="gray-area" style="
+        background-color: rgb(196, 195, 195);
+        width: 90px;
+        height: 90px;
+        border-radius: 20px;
+        border-top-right-radius: 0;
+        border-bottom-right-radius: 0;">
+          </div>
+          <div class="info-link" style="
+          flex: 1;
+          margin-left: 5px;">
+            <p>youtube.com</p>
+            <p>Backend web development - a complete overview (2021)</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr style="margin-bottom: 20px; margin-top: 20px;">
+
+  </section>
+
+  <section class="fourteen">
+    <div style="
+      background-color: rgb(46, 46, 46);
+      width: 70px;
+      position: fixed;
+      top: 600px;
+      
+    height: 198px;
+      left: 0;
+      ">
+      <div style="display: flex;
+      flex-direction: column;
+      align-items: center;
+      ">
+        <img src="profile-1.jpg" style="
+          border-radius: 50px;
+          width: 50px;
+          margin-bottom: 5px;
+          margin-top: 10px;">
+        <img src="cat1.avif" style="
+          border-radius: 50px;
+          width: 50px;
+          object-fit: center;
+          height: 50px;
+          margin-bottom: 5px;">
+        <img src="profile-1.jpg" style="
+          border-radius: 50px;
+          width: 50px;
+          margin-bottom: 5px;">
+      </div>
+    </div>
+    <div style="
+    background-color: rgb(70, 70, 70);
+    position: fixed;
+    top: 600px;
+    left: 65px;
+    height: 198px;
+    width: 300px;">
+      <div style="
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      ">
+      <p style="color: white;
+      margin-left: 20px;
+      margin-top: 10px;">INFO</p>
+      <p style="color: rgb(157, 157, 157);
+      margin-right: 20px;
+      font-size: 30px;">+</p>
+      </div>
+      <p style="color: rgb(157, 157, 157);
+      margin-left: 20px;
+      margin-bottom: 15px;
+      "># new-videos</p>
+      <p style="color: rgb(157, 157, 157);
+      margin-left: 20px;
+      margin-bottom: 15px;
+      "># updates</p>
+      <p style="color: rgb(157, 157, 157);
+      margin-left: 20px;
+      margin-bottom: 15px;
+      "># faq</p>
+      
+    </div>
+  </section>
+</body>
+
+</html>
